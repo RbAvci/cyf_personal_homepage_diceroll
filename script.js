@@ -109,12 +109,18 @@ function display_result() {
   if (rolls.reduce((a,b) => a+b, 0) == goal) {
     let element_info2 = document.getElementById('info');
     element_info2.innerText = 'You Win!';
+        element_info2.style.color = '#33cc00';
+
   } else if (rolls.reduce((a,b) => a+b, 0) < goal) {
     let element_info3 = document.getElementById('info');
     element_info3.innerText = 'Keep Going..';
+        element_info3.style.color = '#3366ff';
+
   } else {
     let element_info4 = document.getElementById('info');
     element_info4.innerText = 'You Lost';
+      element_info4.style.color = '#ff0000';
+
   }
 }
 
