@@ -163,3 +163,35 @@ document.getElementById('button_remove').addEventListener('click', (event) => {
   display_info();
 
 });
+
+function convertToNumber(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return 0
+  } else {
+    return number_value
+  }
+}
+
+
+
+document.getElementById('add_comment_button').addEventListener('click', (event) => {
+  let element_comment_list = document.getElementById('comment_list');
+  let new_li = document.createElement('li');
+  let new_span = document.createElement('span');
+  new_span.innerText = document.getElementById('commentor_name').value;
+
+  new_li.appendChild(new_span);
+  let new_span2 = document.createElement('span');
+  new_span2.innerText = ': ';
+
+  new_li.appendChild(new_span2);
+  let new_span3 = document.createElement('span');
+  new_span3.innerText = document.getElementById('comment').value;
+
+  new_li.appendChild(new_span3);
+
+  element_comment_list.appendChild(new_li);
+
+});
