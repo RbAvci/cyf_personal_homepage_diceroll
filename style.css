@@ -14,7 +14,8 @@ body {
 
 .p-main-content {
   display: inline-block;
-  width: 75%;}
+  width: 75%;
+}
 
 .tech-learner {
   text-decoration: underline;
@@ -113,19 +114,24 @@ h3 {
   display: inline-block;
   font-size: 16px;
   margin-bottom: 20px;
+  transition: all 0.2s ease-in;
 }
 a {
-
   color: #11999e;
   font-size: large;
   padding: 10px;
-
+  text-decoration: none;
+  transition: all 0.5s ease-in;
 }
 
-
+a:hover {
+  color: #40514e;
+}
 
 /* don't edit this */
 .jest-lite-report__status--pass {
   background: var(--color-pass);
 }
-.jest-lite-report__errors { display:none }
+.jest-lite-report__errors {
+  display: none;
+}
